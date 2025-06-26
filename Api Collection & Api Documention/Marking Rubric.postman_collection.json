@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "fbfd18d7-12d3-4699-8d50-850426e15bdd",
+		"name": "Marking Rubric",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10460310"
+	},
+	"item": [
+		{
+			"name": "User Registration",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Ashish Sanura\",\r\n  \"email\": \"ashish@gmail.com\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/Laravel-Test/public/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Laravel-Test",
+						"public",
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTk3YTgwNy00MTBlLTcwYTAtYmJjOS1jOGNhYTExOTlkOTQiLCJqdGkiOiI1OGQyYjJlOTVkZTI5Y2U5MDAzOGYyZjg2YTVlZmMyYzFiZjE4MDM0MjY4MmFiYjJiNmJmOGFlYzU4YzdmZDEzOWFjY2IwMzM3ZjYwN2U0NyIsImlhdCI6MTc1MDk0NzA0MS4yNTQyNjgsIm5iZiI6MTc1MDk0NzA0MS4yNTQyNzQsImV4cCI6MTc4MjQ4MzA0MS4yNDEyMywic3ViIjoiMSIsInNjb3BlcyI6W119.Ga7bHW8E6Wq4Q-MJ1V2SIjD5DN03OKxq4kqXze0DlflEGyIbpB_PluHJXrspWTRJnX7KEAmzqCZiLT0kpJuxca6dyn_JBJ5oogPoTYmlgasZz9nDtviGv80og0QVulMuC3RI2WF2SY5a1zPBDO0WoN9bdhBy7-kjT5jR7YARzMOaVEm62WaYicJSO2Hvlw-8BGiFAKR5bpf6klmLAF1NaXiFpcYQ1cEkzNPkw00a1LxWPsU5XADHUzfQrKCXno_GPdCgdUUVjwzbhUD1u9YWv4RSyFviW74196YlMCq_r66mqL0HucD9Nt39xzOuf22cHQpYgS8mT-EuoDVICi9h1ajqSyrEUYFyDfSmWCaTXs2Fv4z5LKYsouxOd__hkbtm9nON3tYW-lTzOBE2ka23SyI82udgqxj-jMaEeOIwvuqeqwAGu3wD6LCuM1UYOTik55_UGnplp-P0z09_BEU2zUnn7CbNnm3wL6csE5X0jhs3WXu73cxpcv2Fvv1j_R5LYglKevHA1m7gxOTgVS2vDtgs3q1GMt_R0MjfO79VmoZFT_0ah6KLD7yZJqugi04hauKkh_jfeqnLZHcQ8TsJWB4adjbop3W3gKAw_Gn-f31Vcq1Sw6ho_hNsC6kmJSEArB9PKxlOa3cdJplNEPK4k-Ub3dws0xj4mBMjRL2wOpY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"ashish@gmail.com\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/Laravel-Test/public/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Laravel-Test",
+						"public",
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getDrugs National Library of Medicine",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/Laravel-Test/public/api/search-drug?drug_name=aspirin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Laravel-Test",
+						"public",
+						"api",
+						"search-drug"
+					],
+					"query": [
+						{
+							"key": "drug_name",
+							"value": "aspirin"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Drug",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTk3YTgwNy00MTBlLTcwYTAtYmJjOS1jOGNhYTExOTlkOTQiLCJqdGkiOiI4MzMyNDRiY2NiNmQzMTY0ZTZiZWM0ZDkxNWU2ZTA2YmIwMGM1ZDFjN2UwYmZiZjg1ZWUxYTA4NGJlMDZiYjgzMTYxNzFmOGQ1ZDBmOWU1NCIsImlhdCI6MTc1MDk0NzA3Ny4wNTIwOTYsIm5iZiI6MTc1MDk0NzA3Ny4wNTIxMDEsImV4cCI6MTc4MjQ4MzA3Ny4wMzk1NjIsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.ZcfeuxH-JiyK46XAj0oNnfSBk3kKtVj8tt__CKjUWMGk1690GgOzuF4kxMy36zRHAegjUX_iGUx6C4onP1cERkn-Ycn3o1b8JYlcrhft0H7NS4xrQ66tHXiFmFntgVgcHSatDs9tbTwvCQc6dAd1OxpGb4_l1EuHjrHW6zzZNng05WtxjxeheIGjfarovpiZPoezPVs4DVjymuIkqz_q1cAqONP8nvCZoSBUzJ8nsyAgVTKxF2R5sJwm9QwOefvgkCSVIta_XCaPi1yi9ZyV6dDwe7kVBZdC7v83H83FlO4sLqu6dzEO2ImeJK-wbXcCz75O00lZzXAykIPyTBiflk68zJe6ZtVez4376If8kMgYeKpMK1coJpYxk46Zpzfj7xIAlVT5l44PWUnGIXQPJrRGheT0il3r3wWYtsux0STZWku4ZzGKPzyTu6ovmruuhpbvsVGQPPsQT5BKRPsfitZjQBA8SAHjjzqC-xD98MBL_Ju2x-wpT9OnE8mTBGmDRYGQUG7bxXH8EKofn85BkUW60OX2hjWyyhFVYiBGOa2juRjleTSPQuPUbmJ69JdP3W35M8SxU7RRS1j3IMKoKQGzQJoOrzV-4pW12U3pSQmeoWXpiX9wre1aaPwJgd1s5LymsAlxxlBZqBgio8qZHxnYrel2Xdv06L_IUf_b_AY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"rxcui\": \"1001476\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/Laravel-Test/public/api/user/drugs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Laravel-Test",
+						"public",
+						"api",
+						"user",
+						"drugs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Drugs",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTk3YTgwNy00MTBlLTcwYTAtYmJjOS1jOGNhYTExOTlkOTQiLCJqdGkiOiI0MWYwOWE2YTc4NGUzNzM5ODMwOGVmMDA2NzRkNzg3MDBmZmM5MmZmYjNkYjkyNDIzZWRlZDRlYjczOWY3ZDAxYzBjYWRiMTRmMWNkMTM2MyIsImlhdCI6MTc1MDkxODA1OS44NzY0MDIsIm5iZiI6MTc1MDkxODA1OS44NzY0MDYsImV4cCI6MTc4MjQ1NDA1OS44NTI5MTQsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.Zel9ChH7unHt6p88ysNjTripdfjcPHJaoawl3hnJY_rtPa8m0Lbi8lbRVMJ8wcKKbVNKe9gEsPJ2_NEnk5xotmO3PIw_k1_7q_5RQAPi_1jil1vp03--TYkxBqgib6aaxNa5fHN4c-pZzJklNAUF3HN-Eq0DsBIo6n_7XzNW5e7kNhpXtx7I3woX77IUouU-7X5gcTfgj11jvz7mAmm9N6oiO5IMa8KTjNiZgaygi2X6ZgC8VvnCOlpJ0QB0jDGXmvIhXvgeJD6I_DkOXk8yz4IUYg7YL9kjLvEay1uDnaFvBWKc-7rHC5U4fAIk9RYfzgdKTnhlajJvVE-kxi_AV_VT6xT39tcq0HsKtxb6VoEFgi9IkTme0Glc18ENDc4kIK6-VuYi5kYEX0FuxltaeOItcNL4KvY5h1hCz3Re32OKCAH1wQHV8psN9n4aaNr47gKbe1-ANmNn5zzXMfyk5MOEdByiyLnb-fPxFf7rDA3KVCVA68-No4i2auFeQxQDW2hmui9YWbEIoDPtVTXrWgRd16rscO-IuPXJFalultstDHdoyMy2i_NeCxsmOzSgdB1jxxmtL9OQ7OYNyMFzMkBcBRSife-zg8MmK2VAwK7kVDFW4JK4B-sSwt52Tkt9M63LUSwE-1dY41q6pf9yqdnUztkorShCtrLM86HcRhE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/Laravel-Test/public/api/user/drugs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Laravel-Test",
+						"public",
+						"api",
+						"user",
+						"drugs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Drug",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIwMTk3YTgwNy00MTBlLTcwYTAtYmJjOS1jOGNhYTExOTlkOTQiLCJqdGkiOiI0MWYwOWE2YTc4NGUzNzM5ODMwOGVmMDA2NzRkNzg3MDBmZmM5MmZmYjNkYjkyNDIzZWRlZDRlYjczOWY3ZDAxYzBjYWRiMTRmMWNkMTM2MyIsImlhdCI6MTc1MDkxODA1OS44NzY0MDIsIm5iZiI6MTc1MDkxODA1OS44NzY0MDYsImV4cCI6MTc4MjQ1NDA1OS44NTI5MTQsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.Zel9ChH7unHt6p88ysNjTripdfjcPHJaoawl3hnJY_rtPa8m0Lbi8lbRVMJ8wcKKbVNKe9gEsPJ2_NEnk5xotmO3PIw_k1_7q_5RQAPi_1jil1vp03--TYkxBqgib6aaxNa5fHN4c-pZzJklNAUF3HN-Eq0DsBIo6n_7XzNW5e7kNhpXtx7I3woX77IUouU-7X5gcTfgj11jvz7mAmm9N6oiO5IMa8KTjNiZgaygi2X6ZgC8VvnCOlpJ0QB0jDGXmvIhXvgeJD6I_DkOXk8yz4IUYg7YL9kjLvEay1uDnaFvBWKc-7rHC5U4fAIk9RYfzgdKTnhlajJvVE-kxi_AV_VT6xT39tcq0HsKtxb6VoEFgi9IkTme0Glc18ENDc4kIK6-VuYi5kYEX0FuxltaeOItcNL4KvY5h1hCz3Re32OKCAH1wQHV8psN9n4aaNr47gKbe1-ANmNn5zzXMfyk5MOEdByiyLnb-fPxFf7rDA3KVCVA68-No4i2auFeQxQDW2hmui9YWbEIoDPtVTXrWgRd16rscO-IuPXJFalultstDHdoyMy2i_NeCxsmOzSgdB1jxxmtL9OQ7OYNyMFzMkBcBRSife-zg8MmK2VAwK7kVDFW4JK4B-sSwt52Tkt9M63LUSwE-1dY41q6pf9yqdnUztkorShCtrLM86HcRhE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/Laravel-Test/public/api/user/drugs/198440",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"Laravel-Test",
+						"public",
+						"api",
+						"user",
+						"drugs",
+						"198440"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
